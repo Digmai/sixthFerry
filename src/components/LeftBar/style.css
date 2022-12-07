@@ -1,0 +1,52 @@
+.LeftBar {
+  background: rgba(39, 39, 42, 1);
+  min-width: 234px;
+  height: 100%;
+  border-top: 1px solid #414144;
+}
+.topLeftBar {
+  min-height: 44px;
+  color: rgba(161, 161, 170, 1);
+  display: flex;
+  border-bottom: 1px solid #414144;
+}
+.topLeftBarTitle {
+  padding: 8px 0 0 20px;
+}
+.nameProject {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.iconLeftBar {
+  right: 0;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 13px;
+}
+.topLeftBarCild {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+.ItemsForBar {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+
+  padding-left: 22px;
+  display: flex;
+  align-items: center;
+}
+.MupItemsForBarSVG {
+  padding: 8px;
+}
+.ItemsForBar.active {
+  background: #a1a1aa;
+}
+.ItemsForBarText {
+  padding: 8px;
+}

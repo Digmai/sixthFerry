@@ -1,0 +1,47 @@
+.TopBar {
+  background: rgba(39, 39, 42, 1);
+  margin: 0;
+  height: 44px;
+  border: 1px solid #414144;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  width: 100%;
+}
+.TopBarNavBtn {
+  margin-left: 24px;
+  width: 278px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.TopBarNavBtnText.active {
+  border-bottom: 2px solid #ffffff;
+  margin-left: 0;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.TopBarNavBtnText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  color: #a1a1aa;
+}
+
+.TopBarNavText {
+  min-width: 173px;
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
