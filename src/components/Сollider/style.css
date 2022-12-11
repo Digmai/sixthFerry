@@ -24,67 +24,23 @@
 
   border-right: 1px solid #414144;
 }
-
-.table {
-  width: 100%;
-}
-
 .titleСollider.Box {
-  /* padding: 0 9px 12px 10px; */
-}
-
-th {
-  max-width: 200px;
-
-  align-items: center;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 130%;
-
-  letter-spacing: 0.1px;
-
-  color: #a1a1aa;
-}
-.Level {
-}
-
-.Name-of-works {
-}
-
-.Main-sp {
-  /* margin-left: auto; */
-}
-
-.Equipment {
-}
-
-.Overhead-costs {
-}
-
-.Estimated-profit {
+  padding: 0 9px 0 10px;
 }
 .level_edit {
   margin-left: 9px;
-  display: flex;
-  justify-content: space-between;
-  padding: 3px 7px;
-  gap: 7px;
-  max-width: 107px;
+  display: inline-flex;
+  justify-content: flex-start;
+  padding: 3px 6px;
+  gap: 6px;
+
   height: 28px;
   background: #414144;
   border-radius: 6px;
   align-items: center;
 }
-.level1_edit {
-}
-.level1_edit {
-}
-table td {
-  height: 42px;
-  vertical-align: top;
-}
 table {
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -95,17 +51,34 @@ table tr {
   border-left: none;
   border-right: none;
 }
+table td th {
+  vertical-align: middle;
+}
 
 table td {
   height: 18px;
-  align-items: center;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
-  /* or 18px */
-
   letter-spacing: 0.1px;
-
   color: #ffffff;
+}
+th {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.1px;
+  color: #a1a1aa;
+}
+
+.Level {
+  margin-left: 11px;
+  width: max-content;
+}
+.Level_1 {
+  width: 110px;
+}
+.tableText {
+  margin-left: 8px;
 }
