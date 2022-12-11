@@ -2,6 +2,7 @@
   background: rgba(39, 39, 42, 1);
   border: 1px solid #414144;
   width: 100%;
+  height: 100%;
 }
 .topСollider {
   height: 44px;
@@ -23,40 +24,88 @@
 
   border-right: 1px solid #414144;
 }
+
+.table {
+  width: 100%;
+}
+
 .titleСollider.Box {
-  padding-left: 10px;
+  /* padding: 0 9px 12px 10px; */
 }
-.titleСollider {
-  display: flex;
+
+th {
+  max-width: 200px;
+
   align-items: center;
-  color: #f5f5f5;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+
+  letter-spacing: 0.1px;
+
+  color: #a1a1aa;
 }
-.titleСollider.Level {
-  padding: 12px;
-  padding-right: 42px;
+.Level {
 }
 
-.titleСollider.Name-of-works {
-  padding: 12px;
-  padding-right: 42px;
+.Name-of-works {
 }
 
-.titleСollider.Main-sp {
-  padding: 12px;
-  padding-right: 42px;
+.Main-sp {
+  /* margin-left: auto; */
 }
 
-.titleСollider.Equipment {
-  padding: 12px;
-  padding-right: 42px;
+.Equipment {
 }
 
-.titleСollider.Overhead-costs {
-  padding: 12px;
-  padding-right: 42px;
+.Overhead-costs {
 }
 
-.titleСollider.Estimated-profit {
-  padding: 12px;
-  padding-right: 42px;
+.Estimated-profit {
+}
+.level_edit {
+  margin-left: 9px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 7px;
+  gap: 7px;
+  max-width: 107px;
+  height: 28px;
+  background: #414144;
+  border-radius: 6px;
+  align-items: center;
+}
+.level1_edit {
+}
+.level1_edit {
+}
+table td {
+  height: 42px;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+}
+
+table tr {
+  min-height: 60px;
+  border: 1px solid #414144;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+table td {
+  height: 18px;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+
+  letter-spacing: 0.1px;
+
+  color: #ffffff;
 }

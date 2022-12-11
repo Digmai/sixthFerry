@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   border-bottom: none;
-  width: 100%;
+  /* width: 100%; */
 }
 .TopBarNavBtn {
   margin-left: 24px;
