@@ -52,7 +52,7 @@ export const Сollider = () => {
             </tr>
             <tr style={{ height: "60px" }}>
               <td className="Level_1 " scope="row">
-                {svgLevel_2}
+                <div className="EditIconLevel_2">{svgLevel_2}</div>
               </td>
               <td>
                 <div className="tableText">level_edit</div>
