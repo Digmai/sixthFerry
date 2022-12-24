@@ -8,24 +8,19 @@ export const Сollider = () => {
       {svgCart}
     </div>
   );
-  const APIarr = [
-    {
-      children: [{ children: [{}, {}] }, {}],
-    },
-  ];
+  const APIarr = [{}];
 
   interface mapArrI {
-    children: {}[];
+    items: { children: {}[] }[] | {}[];
   }
-  const MapArr: React.FC<mapArrI[] | {}[]> = (items) => {
-    const i = [items];
-    console.log(typeof i, "--->", i, "--->", items);
+  const MapArr: React.FC<mapArrI> = ({ items }) => {
+    console.log("--->", items);
 
     return (
       <>
-        {i?.map((e: any, i: any) => {
+        {items?.map((e: any, i: any) => {
           e.children?.length !== undefined ? (
-            MapArr(e.children)
+            MapArr({ ...e.children }, i)
           ) : (
             <Items key={i} />
           );
@@ -81,7 +76,7 @@ export const Сollider = () => {
               </td>
             </tr>
 
-            <MapArr {...APIarr} />
+            <MapArr items={...APIarr} />
           </tbody>
         </table>
       </div>
