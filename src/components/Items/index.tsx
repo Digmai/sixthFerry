@@ -1,24 +1,22 @@
-import { svgFile } from "../Сollider/svg";
+import { Item } from "../Item";
 
-export const Items = (props: any) => {
+interface mapArrI {
+  items: { children: {}[] }[] | {}[];
+  num?: number;
+}
+export const Items: React.FC<mapArrI> = (props) => {
+  const { items, num } = props;
+  console.log(num, "--->", items);
+
   return (
-    <tr style={{ height: "60px" }}>
-      <td className="Level_1 " scope="row">
-        <div className="svg_level_1">
-          <div className="TopSvg"></div>
-          <div> {svgFile}</div>
-          <div className="BeamBottom"></div>
-        </div>
-      </td>
-      <td>
-        <div className="tableText">level_edit</div>
-      </td>
-      <td>
-        <div className="tableText">level_edit</div>
-      </td>
-      <td>
-        <div className="tableText">level_edit</div>
-      </td>
-    </tr>
+    <>
+      {items?.map((e: any, i: number) =>
+        e.children?.length !== undefined ? (
+          Items({ items: e.children, num: i })
+        ) : (
+          <Item key={i} />
+        )
+      )}
+    </>
   );
 };

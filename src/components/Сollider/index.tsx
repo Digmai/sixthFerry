@@ -10,27 +10,6 @@ export const Сollider = () => {
   );
   const APIarr = [{ children: [{}, {}] }, { children: [{}, {}] }];
 
-  interface mapArrI {
-    items: { children: {}[] }[] | {}[];
-    num?: number;
-  }
-  const MapArr: React.FC<mapArrI> = (props) => {
-    const { items, num } = props;
-    console.log(num, "--->", items);
-
-    return (
-      <>
-        {items?.map((e: any, i: number) =>
-          e.children?.length !== undefined ? (
-            MapArr({ items: e.children, num: i })
-          ) : (
-            <Items key={i} />
-          )
-        )}
-      </>
-    );
-  };
-
   return (
     <div className="Сollider">
       <div className="topСollider">
@@ -78,7 +57,7 @@ export const Сollider = () => {
               </td>
             </tr>
 
-            <MapArr items={APIarr} />
+            <Items items={APIarr} />
           </tbody>
         </table>
       </div>
