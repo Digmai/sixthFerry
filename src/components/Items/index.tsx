@@ -1,7 +1,7 @@
 import { Item } from "../Item";
 
 interface mapArrI {
-  items: { children: {}[] }[] | {}[];
+  items: { children: { children: {}[] }[] }[] | {}[] | { children: {}[] }[];
   num?: number;
 }
 export const Items: React.FC<mapArrI> = (props) => {

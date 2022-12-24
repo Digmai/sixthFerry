@@ -8,7 +8,11 @@ export const Сollider = () => {
       {svgCart}
     </div>
   );
-  const APIarr = [{ children: [{}, {}] }, { children: [{}, {}] }];
+  const APIarr = [
+    { children: [{}, {}] },
+    { children: [{ children: [{}, {}] }, {}] },
+    {},
+  ];
 
   return (
     <div className="Сollider">
