@@ -18,14 +18,17 @@ export const Сollider = () => {
     children: {}[];
   }
   const MapArr: React.FC<mapArrI[] | {}[]> = (items) => {
+    const i = [items];
+    console.log(typeof i, "--->", i, "--->", items);
+
     return (
       <>
-        <Items />
-
-        {items?.map((e: any, i: any) => {
-          e.children?.length !== undefined
-            ? MapArr(e.children)
-            : console.log(e.children?.length, i);
+        {i?.map((e: any, i: any) => {
+          e.children?.length !== undefined ? (
+            MapArr(e.children)
+          ) : (
+            <Items key={i} />
+          );
         })}
       </>
     );
