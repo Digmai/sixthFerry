@@ -11,16 +11,17 @@ export const Сollider = () => {
   const APIarr = [{}];
 
   interface mapArrI {
-    items: { children: {}[] }[] | {}[];
+    items: {}[];
   }
-  const MapArr: React.FC<mapArrI> = ({ items }) => {
+  const MapArr: React.FC<mapArrI> = (props) => {
+    const { items } = props;
     console.log("--->", items);
 
     return (
       <>
         {items?.map((e: any, i: any) => {
           e.children?.length !== undefined ? (
-            MapArr({ ...e.children }, i)
+            MapArr({ items: e.children })
           ) : (
             <Items key={i} />
           );
@@ -76,7 +77,7 @@ export const Сollider = () => {
               </td>
             </tr>
 
-            <MapArr items={...APIarr} />
+            <MapArr items={APIarr} />
           </tbody>
         </table>
       </div>
