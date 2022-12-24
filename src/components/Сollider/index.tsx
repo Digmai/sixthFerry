@@ -8,24 +8,25 @@ export const Сollider = () => {
       {svgCart}
     </div>
   );
-  const APIarr = [{}];
+  const APIarr = [{}, {}, {}];
 
   interface mapArrI {
     items: {}[];
+    num?: number;
   }
   const MapArr: React.FC<mapArrI> = (props) => {
-    const { items } = props;
-    console.log("--->", items);
+    const { items, num } = props;
+    console.log(num, "--->", items);
 
     return (
       <>
-        {items?.map((e: any, i: any) => {
+        {items?.map((e: any, i: number) =>
           e.children?.length !== undefined ? (
-            MapArr({ items: e.children })
+            MapArr(e.children, i)
           ) : (
             <Items key={i} />
-          );
-        })}
+          )
+        )}
       </>
     );
   };
