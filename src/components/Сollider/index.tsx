@@ -1,14 +1,9 @@
 import { Items } from "../Items";
 import "./style.css";
-import { svgLevel_1, svgLevel_2, svgFile, svgCart } from "./svg";
 export const Сollider = () => {
-  const onMouseEdit = (
-    <div className="level_edit">
-      {svgFile}
-      {svgCart}
-    </div>
-  );
+
   const APIarr = [
+    {},
     { children: [{}, {}] },
     { children: [{ children: [{}, {}] }, {}] },
     {},
@@ -42,25 +37,6 @@ export const Сollider = () => {
                 <div className="tableText">Сметная прибыль</div>
               </th>
             </tr>
-            <tr style={{ height: "60px" }}>
-              <td className="Level_1 " scope="row">
-                <div className="svg_level_1">
-                  <div className="TopSvg"></div>
-                  <div> {svgFile}</div>
-                  <div className="BeamBottom"></div>
-                </div>
-              </td>
-              <td>
-                <div className="tableText">level_edit</div>
-              </td>
-              <td>
-                <div className="tableText">level_edit</div>
-              </td>
-              <td>
-                <div className="tableText">level_edit</div>
-              </td>
-            </tr>
-
             <Items items={APIarr} />
           </tbody>
         </table>

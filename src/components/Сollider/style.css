@@ -27,18 +27,6 @@
 .titleСollider.Box {
   padding: 0 9px 0 10px;
 }
-.level_edit {
-  margin-left: 9px;
-  display: inline-flex;
-  justify-content: flex-start;
-  padding: 3px 6px;
-  gap: 6px;
-
-  height: 28px;
-  background: #414144;
-  border-radius: 6px;
-  align-items: center;
-}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -76,28 +64,13 @@ th {
   margin-left: 11px;
   width: max-content;
 }
-.Level_1 {
-  height: 100%;
-  width: 110px;
-  display: block;
-}
+
 .tableText {
   margin-left: 8px;
 }
-.EditIconLevel_2 {
-  padding-left: 35px;
-}
 
-.svg_level_1 {
-  margin-left: 16px;
-}
-.svg_level_2 {
-  margin-left: 36px;
-}
+/* ==================== */
 
-.svg_level_3 {
-  margin-left: 56px;
-}
 .TopSvg {
   width: 100%;
   height: 20px;
@@ -119,4 +92,22 @@ th {
   position: absolute;
   padding-left: 0.3px;
   border-left: solid rgba(198, 198, 198, 1);
+}
+
+.Level_1 {
+  height: 100%;
+  width: 110px;
+  display: block;
+}
+.level_edit {
+  margin-left: 9px;
+  display: inline-flex;
+  justify-content: flex-start;
+  padding: 3px 6px;
+  gap: 6px;
+
+  height: 28px;
+  background: #414144;
+  border-radius: 6px;
+  align-items: center;
 }

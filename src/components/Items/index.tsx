@@ -1,20 +1,20 @@
 import { Item } from "../Item";
 
 interface mapArrI {
-  items: { children: { children: {}[] }[] }[] | {}[] | { children: {}[] }[];
-  num?: number;
+  items: { children?: { children?: {}[] }[] }[] | {}[] | { children?: {}[] }[];
+  marginLeft?: number;
 }
 export const Items: React.FC<mapArrI> = (props) => {
-  const { items, num } = props;
-  console.log(num, "--->", items);
+  const { items, marginLeft = 16 } = props;
+  console.log(marginLeft, "--->", items);
 
   return (
     <>
-      {items?.map((e: any, i: number) =>
-        e.children?.length !== undefined ? (
-          Items({ items: e.children, num: i })
+      {items?.map((e: any, i) =>
+        e.children?.length !== undefined  ? (
+          Items({ items: e.children, marginLeft: marginLeft + 20 })
         ) : (
-          <Item key={i} />
+          <Item key={i} marginLeft={marginLeft} />
         )
       )}
     </>
