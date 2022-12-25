@@ -12,7 +12,12 @@ export const Item = (props: any) => {
     return (
       <>
         <div
-          style={{ marginLeft: `${props.marginLeft + 8}px` }}
+          style={{
+            marginLeft: `${props.marginLeft + 8}px`,
+            paddingTop: `${
+              props.children.length > 1 ? props.children.length * 50 + 8 : 50
+            }px`,
+          }}
           className="svg__level__pg"
         ></div>
       </>
