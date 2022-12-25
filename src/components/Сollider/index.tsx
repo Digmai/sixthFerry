@@ -1,7 +1,10 @@
 import { Items } from "../Items";
 import "./style.css";
 export const Сollider = () => {
-  const APIarr = [{ children: [{ children: [{}, {}] }, {}] }];
+  const APIarr = [
+    { children: [{}, { children: [{}] }] },
+    { children: [{}, {}] },
+  ];
 
   return (
     <div className="Сollider">

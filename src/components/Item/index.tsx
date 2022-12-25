@@ -11,17 +11,19 @@ export const Item = (props: any) => {
   const Svg__level__pg = () => {
     return (
       <>
-        <div className="svg__level__pg"></div>
+        <div
+          style={{ marginLeft: `${props.marginLeft + 8}px` }}
+          className="svg__level__pg"
+        ></div>
       </>
     );
   };
-  console.log(props.Ref);
-  let ref = useRef(null);
-  //ref={ref.current}
+  console.log("===>", props);
+
   return (
-    <tr style={{ height: "60px" }}>
+    <>
       <td className="Level_1 " scope="row">
-        {props.marginLeft > 16 && <Svg__level__pg />}
+        {Boolean(props.children) && <Svg__level__pg />}
 
         <div>
           <div className="TopSvg"></div>
@@ -30,14 +32,22 @@ export const Item = (props: any) => {
         </div>
       </td>
       <td>
-        <div className="tableText">level_edit</div>
+        <div className="tableText">Наименование работ</div>
       </td>
       <td>
-        <div className="tableText">level_edit</div>
+        <div className="tableText">3400</div>
       </td>
       <td>
-        <div className="tableText">level_edit</div>
+        <div className="tableText">322300</div>
       </td>
-    </tr>
+
+      <td>
+        <div className="tableText">422300</div>
+      </td>
+
+      <td>
+        <div className="tableText">3322300</div>
+      </td>
+    </>
   );
 };
