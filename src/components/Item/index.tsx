@@ -8,25 +8,25 @@ const onMouseEdit = (
 );
 
 export const Item = (props: any) => {
-  const CRef = useRef();
   const Svg__level__pg = () => {
-    console.log(CRef.current);
-
     return (
       <>
         <div className="svg__level__pg"></div>
       </>
     );
   };
-
+  console.log(props.Ref);
+  let ref = useRef(null);
+  //ref={ref.current}
   return (
     <tr style={{ height: "60px" }}>
       <td className="Level_1 " scope="row">
-        <div style={{ marginLeft: `${props.marginLeft}px` }}>
+        {props.marginLeft > 16 && <Svg__level__pg />}
+
+        <div>
           <div className="TopSvg"></div>
-          <div ref={CRef.current}> {svgFile}</div>
+          <div style={{ marginLeft: `${props.marginLeft}px` }}> {svgFile}</div>
           <div className="svg_level__pg"></div>
-          <Svg__level__pg />
         </div>
       </td>
       <td>

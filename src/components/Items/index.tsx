@@ -1,3 +1,4 @@
+import { createRef, LegacyRef, useRef } from "react";
 import { Item } from "../Item";
 
 interface mapArrI {
@@ -6,14 +7,13 @@ interface mapArrI {
 }
 export const Items: React.FC<mapArrI> = (props) => {
   const { items, marginLeft = 16 } = props;
-  console.log(marginLeft, "--->", items);
 
   return (
     <>
       {items?.map((e: any, i) =>
         e.children?.length !== undefined ? (
           <>
-            <Item key={i} marginLeft={marginLeft} />
+            <Item key={i} marginLeft={marginLeft} children={e.children} />
             <Items {...{ items: e.children, marginLeft: marginLeft + 20 }} />
           </>
         ) : (
